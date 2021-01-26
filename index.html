@@ -13,13 +13,14 @@
 <a href="https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue" target="_blank">Scan QR Code</a> 
  
 
-<script>
+
+  <script>
    
     // 
 
-function oneChatCallBackQRScanner(ScanQRcodevalue){
+
+      function oneChatCallBackQRScanner(ScanQRcodevalue){
         alert(ScanQRcodevalue);
-        console.log(ScanQRcodevalue);
         
 
         
@@ -27,14 +28,7 @@ function oneChatCallBackQRScanner(ScanQRcodevalue){
         alert("data empty ")
       }else { 
 
-        const data = {
-          
-          "data": ScanQRcodevalue,
-          "name": "ScanQRcodevalue",
-          "hOffset": 250
-          
-      };
-      const data = { username: "abcde" };
+        const data = { username: "abcde" , };
         alert(data);
         fetch('https://a25449358b186079cf9d262feb4b4984.m.pipedream.net', {
           method: 'POST', // or 'PUT'
