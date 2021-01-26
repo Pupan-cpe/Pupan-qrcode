@@ -3,52 +3,62 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pupan v2.1</title>
+  <style>
 
+  </style>
 </head>
 <body>
  
   
 <a href="https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue" target="_blank">Scan QR Code</a> 
  
-</body>
-</html>
-<script>
+
+
+  <script>
    
-  // 
+    // 
 
-  var data2 = None;
-    function oneChatCallBackQRScanner(ScanQRcodevalue){
-      alert(ScanQRcodevalue);
-      data2 = ScanQRcodevalue
 
-            if (data2 === None){
-                alert("empty")
-            }else { 
-              const data = { username: 'pupan' };
+      function oneChatCallBackQRScanner(ScanQRcodevalue){
+        alert(ScanQRcodevalue);
+        
 
-              fetch('https://a25449358b186079cf9d262feb4b4984.m.pipedream.net', {
-                method: 'POST', // or 'PUT'
-                headers: {
-                  'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-              })
-              .then(response => response.json())
-              .then(data => {
-                console.log('Success:', data);
-              })
-              .catch((error) => {
-                console.error('Error:', error);
-              });
-            }
-            
-  
+        
+      if (ScanQRcodevalue === ""){
+        alert("data empty ")
+      }else { 
+
+        const data = { username: "abcde" , };
+        alert(ScanQRcodevalue);
+        fetch('https://a25449358b186079cf9d262feb4b4984.m.pipedream.net', {
+          method: 'POST', // or 'PUT'
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify(data),
+        })
+        .then(response => response.json())
+        .then(data => {
+          console.log('Success:', data);
+        })
+        .catch((error) => {
+          console.error('Error:', error);
+        });
+      }
+
+      
+
+      
+   
+
+    
+   
+    
 } 
 
+    
   
-
-  
-</script>
-<style>
-
-</style>
+    
+  </script>
+</body>
+</html>
