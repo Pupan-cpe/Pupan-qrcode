@@ -2,63 +2,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pupan v2.1</title>
-  <style>
+  <title>Pupan v2.11</title>
 
-  </style>
 </head>
 <body>
  
   
 <a href="https://chat-api.one.th/go_api/api/v1/openScanQRcodeWithValue" target="_blank">Scan QR Code</a> 
  
-
-
-  <script>
-   
-    // 
-
-
-      function oneChatCallBackQRScanner(ScanQRcodevalue){
-        alert(ScanQRcodevalue);
-        
-
-        
-      if (ScanQRcodevalue === ""){
-        alert("data empty ")
-      }else { 
-
-        const data = { username: "abcde" , };
-        alert(data);
-        fetch('https://a25449358b186079cf9d262feb4b4984.m.pipedream.net', {
-          method: 'POST', // or 'PUT'
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify(data),
-        })
-        .then(response => response.json())
-        .then(data => {
-          console.log('Success:', data);
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
-      }
-
-      
-
-      
-   
-
-    
-   
-    
-} 
-
-    
-  
-    
-  </script>
 </body>
 </html>
+<script>
+   
+  // 
+
+
+    function oneChatCallBackQRScanner(ScanQRcodevalue){
+      alert(ScanQRcodevalue);
+  
+} 
+
+  
+
+  
+</script>
+<style>
+
+</style>
